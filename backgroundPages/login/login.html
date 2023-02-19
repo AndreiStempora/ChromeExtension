@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../common/style.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="logo">
+        <img src="../../images/icon128.png" alt="logo">
+    </div>
+    <section class="section-login visible">
+        <h1 class="title">Login</h1>
+        <form class="login-form">
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <span class="invalid">Invalid Credentials</span>
+            <span class="success">Success</span>
+            <span class="error">Something went wrong! Try again later</span>
+            <input id="form-submit" type="submit" value="login">
+        </form>
+    </section>
+
+    <section class="section-select-2fa">
+        
+        <h1 class="title">Select 2FA</h1>
+        <ol class="2fa-options">
+            
+        </ol>
+    </section>
+
+    <section class="section-select-enter-2fa">
+        
+        <h1 class="title">Enter 2FA</h1>
+        <form>
+            <input type="number">
+            <span class="invalid">Invalid Credentials</span>
+            <span class="success">Success</span>
+            <span class="error">Something went wrong! Try again later</span>
+            <input type="submit" value="Send code">
+        </form>
+    </section>
+    <section class="section-2fa-success">
+        <script type='module' src="./login.js"></script>
+</body>
+</html>

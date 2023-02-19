@@ -1,0 +1,87 @@
+html{
+    font-size: 10px;
+}
+* {
+    box-sizing:border-box;
+}
+body{
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    min-width: 400px;
+    height: 400px;
+    background-color: #050607;
+    color:rgba(255,255,255,0.8);
+    margin:0;
+}
+
+section{
+    opacity: 0;
+    visibility: hidden;
+    height:0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+}
+
+section.visible{
+    opacity: 1;
+    visibility: visible;
+    height:calc(100% - 130px);
+}
+
+.invalid{
+    display: none;
+    color:red;
+}
+.success{
+    display: none;
+    color:green;
+}
+.error{
+    display: none;
+    color:red;
+}
+
+.logo{
+    text-align: center;
+}
+
+.login-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form .form-group{
+    margin:1rem;
+}
+
+.login-form .form-group label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.login-form .form-group input{
+    background: transparent;
+    border:1px solid #c0c0c0;
+    border-radius: 3px;
+    min-height: 2.5rem;
+    display: block;
+    caret-color: #fff;
+    color: #fff;
+}
+
+.login-form .form-group input:focus{
+    outline: none;
+    border:1px solid #fff;
+}
+.title{
+    margin-top:0;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+}

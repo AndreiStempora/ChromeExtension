@@ -1,0 +1,40 @@
+{
+    "name": "Novosteer Vin Extension",
+    "version": "0.0.1",
+    "manifest_version": 3,
+
+    "description": "This extension finds Vins on a page and wraps then into a link to the Vin Decoder",
+    "icons": {
+        "16": "images/icon16.png",
+        "24": "images/icon32.png",
+        "32": "images/icon32.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+
+    "background.service_worker": {
+        "scripts": "./background.js"
+    },
+
+    "options_page": "options.html",
+    "action": {
+        "default_icon": "images/icon16.png",
+        "default_popup": "./backgroundPages/login/login.html"
+    },
+    "content_scripts": [
+        {
+            "js": ["foreground/foreground.js"],
+            "css": ["foreground/foreground.css"],
+            "matches": [
+                "*://*/*"
+            ],
+            "exclude_matches": [
+                "https://www.novosteer.com/*"
+            ]
+        }
+    ],
+    "permissions":[
+        "tabs",
+        "storage"
+    ]
+}
